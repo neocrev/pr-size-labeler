@@ -24,6 +24,10 @@ jobs:
 
 That's it. Every PR gets a `size/xs` through `size/xl` label automatically.
 
+<p align="center">
+  <img src="demo.svg" alt="PR size labels" width="480">
+</p>
+
 ## The size chart
 
 | Label   | Lines | What it means       |

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260">
+  <rect width="480" height="260" rx="8" fill="#1e1e2e"/>
+  <circle cx="16" cy="16" r="5" fill="#ff5f58"/>
+  <circle cx="32" cy="16" r="5" fill="#ffbd2e"/>
+  <circle cx="48" cy="16" r="5" fill="#18c132"/>
+  <style>
+    .t { fill: #cdd6f4; font: 14px 'Monaco','Consolas',monospace; }
+    .h { fill: #a6e3a1; font: bold 15px 'Monaco','Consolas',monospace; }
+    .s { fill: #a6adc8; font: 12px 'Monaco','Consolas',monospace; }
+  </style>
+  <text x="20" y="50" class="h">PR Size Labels</text>
+  <text x="20" y="75" class="t">size/xs    1-10 lines     : coffee review</text>
+  <text x="20" y="99" class="t">size/s    11-50 lines     : quick glance</text>
+  <text x="20" y="123" class="t">size/m    51-200 lines    : standard review</text>
+  <text x="20" y="147" class="t">size/l    201-800 lines   : block 30min</text>
+  <text x="20" y="171" class="t">size/xl   800+ lines      : schedule it</text>
+  <text x="20" y="210" class="s">→ Labeled automatically on every PR</text>
+  <text x="20" y="230" class="s">→ Reviewers know what they're in for</text>
+</svg>
