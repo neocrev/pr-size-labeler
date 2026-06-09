@@ -1,0 +1,61 @@
+name: "PR Size Labeler"
+description: "Automatically label PRs based on lines changed — XS / S / M / L / XL"
+author: "neocrev"
+
+branding:
+  icon: "tag"
+  color: "green"
+
+inputs:
+  github-token:
+    description: "GitHub token (automatically provided)"
+    required: false
+    default: ${{ github.token }}
+  xs-max:
+    description: "Max lines for XS label"
+    required: false
+    default: "10"
+  s-max:
+    description: "Max lines for S label"
+    required: false
+    default: "50"
+  m-max:
+    description: "Max lines for M label"
+    required: false
+    default: "200"
+  l-max:
+    description: "Max lines for L label"
+    required: false
+    default: "800"
+  label-xs:
+    description: "Label for XS PRs"
+    required: false
+    default: "size/xs"
+  label-s:
+    description: "Label for S PRs"
+    required: false
+    default: "size/s"
+  label-m:
+    description: "Label for M PRs"
+    required: false
+    default: "size/m"
+  label-l:
+    description: "Label for L PRs"
+    required: false
+    default: "size/l"
+  label-xl:
+    description: "Label for XL PRs"
+    required: false
+    default: "size/xl"
+  exclude-labels:
+    description: "Comma-separated label patterns to exclude (e.g. 'dependabot,automated')"
+    required: false
+    default: ""
+  ignore-files:
+    description: "Glob patterns to ignore (e.g. '*.lock,*.md')"
+    required: false
+    default: ""
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
