@@ -1,12 +1,18 @@
 # PR Size Labeler
 
-A GitHub Action that labels pull requests by how many lines they change. XS / S / M / L / XL.
+[![GitHub Action](https://img.shields.io/badge/GitHub-Action-blue)](https://github.com/marketplace/actions/pr-size-labeler) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-The idea: small PRs get reviewed fast. Large PRs need coffee. This makes it obvious which is which.
+Labels every PR by how many lines it changes. XS / S / M / L / XL.
+
+<p align="center">
+  <img src="demo.svg" alt="PR size labels in action" width="480">
+</p>
+
+---
 
 ## Setup
 
-Add this to `.github/workflows/pr-size.yml`:
+Add to `.github/workflows/pr-size.yml`:
 
 ```yaml
 name: Label PR Size
@@ -22,50 +28,38 @@ jobs:
       - uses: neocrev/pr-size-labeler@v1
 ```
 
-That's it. Every PR gets a `size/xs` through `size/xl` label automatically.
+Every PR gets a `size/xs`–`size/xl` label automatically.
 
-<p align="center">
-  <img src="demo.svg" alt="PR size labels" width="480">
-</p>
+---
 
-## The size chart
+## Thresholds
 
-| Label   | Lines | What it means       |
-|---------|-------|---------------------|
-| size/xs | 1-10  | Coffee break review |
-| size/s  | 11-50 | Quick glance        |
-| size/m  | 51-200| Standard review     |
-| size/l  | 201-800 | Block 30 minutes  |
-| size/xl | 800+  | Schedule it         |
+| Label | Lines | Review time |
+|-------|-------|-------------|
+| size/xs | 1–10 | Coffee break |
+| size/s  | 11–50 | Quick glance |
+| size/m  | 51–200 | Standard |
+| size/l  | 201–800 | Block 30 min |
+| size/xl | 800+ | Schedule it |
 
-## Tweaking it
+---
+
+## Customize
 
 ```yaml
 - uses: neocrev/pr-size-labeler@v1
   with:
-    # Custom thresholds
     xs-max: 10
     s-max: 50
     m-max: 200
     l-max: 800
-
-    # Custom label names (if your team uses different conventions)
     label-xs: "size/xs"
     label-s: "size/s"
-    label-m: "size/m"
-    label-l: "size/l"
-    label-xl: "size/xl"
-
-    # Skip bots
     exclude-labels: "dependabot,automated"
-
-    # Ignore generated files
     ignore-files: "*.lock,*.md,*.svg"
 ```
 
-## Why not just use codeowners or whatever?
-
-Size labels are the simplest signal for reviewers. A PR with `size/xs` takes 30 seconds. A PR with `size/xl` needs a meeting. No math, no guessing.
+---
 
 ## License
 
