@@ -1,7 +1,7 @@
 {
   "name": "pr-size-labeler",
   "version": "1.0.0",
-  "description": "GitHub Action to label PRs by size",
+  "description": "Label PRs by size — XS/S/M/L/XL — so reviewers know what they're in for",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
