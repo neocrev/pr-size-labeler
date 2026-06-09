@@ -1,8 +1,9 @@
-# PR Size Labeler
-
-[![GitHub Action](https://img.shields.io/badge/GitHub-Action-blue)](https://github.com/marketplace/actions/pr-size-labeler) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
-Labels every PR by how many lines it changes. XS / S / M / L / XL.
+<p align="center">
+  <h1>PR Size Labeler</h1>
+  <p>Labels every PR by how many lines it changes. XS / S / M / L / XL.</p>
+  <a href="https://github.com/marketplace/actions/pr-size-labeler"><img src="https://img.shields.io/badge/GitHub-Action-blue" alt="GitHub Action"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+</p>
 
 <p align="center">
   <img src="demo.svg" alt="PR size labels in action" width="480">
